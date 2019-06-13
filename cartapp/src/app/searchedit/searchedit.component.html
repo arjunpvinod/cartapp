@@ -1,0 +1,58 @@
+<h1>SEARCH BOOK </h1>
+<html>
+<body>
+<table>
+<tr>
+<td>Enter Book Name to be search:</td>
+<td><input type="text" placeholder="Enter Book Name" [(ngModel)]=title/></td>
+</tr>
+
+
+
+<tr>
+<td>
+    <button class="btn waves-effect waves-light" type="submit" name="action" (click)="searchbook()">Search
+      </button>
+
+</td>
+</tr>
+
+</table>
+
+
+<table  *ngIf="showtable">
+<tr><th> Name</th>
+  <th> Author</th>
+  <th> Price</th>
+</tr>
+<tr *ngFor = "let b of book">
+      <td> {{b.title}} </td>
+      <td> {{b.author}} </td>
+      <td> {{b.price}} </td>
+      <td>
+          <button class="btn waves-effect waves-light" type="submit" name="action" (click)="editbook(b.author,b.price,b.title)">Edit
+            </button>
+</tr>
+</table>
+
+<table *ngIf="showedit">
+<h1>EDIT BOOK</h1>
+
+<tr>
+<td>Author</td>
+<td><input type="text"  [(ngModel)]=author placeholder={{b.author}}/></td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td><input type="text"  [(ngModel)]=price placeholder={{b.price}}/></td>
+</tr>
+
+<td>
+    <button class="btn waves-effect waves-light" type="submit" name="action" (click)="updatebook()">Update
+      </button>
+</td>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 
+<div class="row">
+    <h1>ADD BOOK</h1>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+               Name : <input type="text" [(ngModel)]="title"/>
+        </div>
+        <div class="input-field col s6">
+              Author : <input type="text" placeholder="Author Name"  [(ngModel)]="author"/>
+        </div>
+      </div>
+      <div class="input-field col s6">
+           Price : <input type="text" placeholder="Price"  [(ngModel)]="price"/>
+          </div>
+          <div class="input-field col s6">
+                <button class="btn waves-effect waves-light" type="submit" name="action" (click)="Newbook()">ADD
+                      </button>
+            </div>
+    </form>
+        </div> -->
+        
+
+
+<html>
+<h1>ADD BOOK</h1>
+<body>
+<table>
+<tr>
+<td>Name</td>
+<td><input type="text"  [(ngModel)]="title" placeholder="Book Name"/></td>
+</tr>
+
+<tr>
+<td>Author</td>
+<td><input type="text"  [(ngModel)]="author" placeholder="Author Name"/></td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td><input type="text"  [(ngModel)]="price" placeholder="Price"/></td>
+</tr>
+
+<tr>
+<td><button class="btn waves-effect waves-light" type="submit" name="action" (click)="Newbook()">ADD
+    </button>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

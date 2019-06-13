@@ -1,0 +1,14 @@
+
+<h1>VIEW BOOK</h1>
+
+<table border="1">
+<tr><th> Name</th>
+  <th> Author</th>
+  <th> Price</th>
+</tr>
+<tr *ngFor = "let b of book">
+      <td> {{b.title}} </td>
+      <td> {{b.author}} </td>
+      <td> {{b.price}} </td>
+</tr>
+</table>
